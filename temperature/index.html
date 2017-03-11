@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app='temperatureApp'>
+
+<head>
+  <script data-require="angular.js@1.6.1" data-semver="1.6.1" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div ng-controller='mainCtrl'>
+    <div temperature='temp.celsius' temperature-input='"Celsius"' on-update-temperature='updateFahrenheit(temperature)'></div>
+    <div temperature='temp.fahrenheit' temperature-input='"Fahrenheit"' on-update-temperature='updateCelsius(temperature)'></div>
+    <div boiling-verdict='temp.celsius'></div>
+  </div>
+</body>
+
+</html>
